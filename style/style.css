@@ -1,0 +1,7 @@
+#wrapper{
+    height: 100%
+}
+.block-full-size{
+    position: fixed;
+    top: 40%;
+}
