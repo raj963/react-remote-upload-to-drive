@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { reduxForm } from 'redux-form';
-import Select from 'react-select';
+import {getCode} from '../actions/index';
 
 class IndexView extends Component{
     onSubmit(props){
         console.log(props);
+        this.props.getCode();
     }
 
     render(){
@@ -37,4 +38,4 @@ class IndexView extends Component{
 export default reduxForm({
     form: 'LeechForm',
     fields: ['link', 'typeDrive']
-}, null)(IndexView);//similar to connect method
+}, null,{getCode})(IndexView);//similar to connect method
